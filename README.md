@@ -1,6 +1,6 @@
 <p align="center">
     <a href="#">
-        <img src="https://i.ibb.co/y5SvtR6/2020-05-20-21-36-39.png">
+        <img src="https://i.ibb.co/934F0Lk/2020-05-21-01-50-00.png">
     </a>
     <h1 align="center">Тестовое задание</h1>
     <br>
