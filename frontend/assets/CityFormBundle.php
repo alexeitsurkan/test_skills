@@ -1,9 +1,9 @@
 <?php namespace frontend\assets;
 
-class FormBundle extends AppAsset
+class CityFormBundle extends AppAsset
 {
     public $js = [
-        'js/user/form.js'
+        'js/city/form.js'
     ];
 
     public function __construct() {

@@ -1,6 +1,6 @@
 <?php
 
-use frontend\assets\FormBundle;
+use frontend\assets\UserFormBundle;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
  * @var $dic_skill
  * @var $dic_city
  */
-FormBundle::register($this);
+UserFormBundle::register($this);
 $this->registerJs(
     'var action= "' . $action . '"; '
     , yii\web\View::POS_HEAD);
@@ -46,7 +46,6 @@ $this->registerJs(
                 'class' => 'form-control',
                 'id' => 'skill',
                 'multiple' => true,
-                'prompt' => 'выберите...',
             ]) ?>
         </div>
     </div>

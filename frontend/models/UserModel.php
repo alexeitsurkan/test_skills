@@ -20,7 +20,7 @@ class UserModel
             ->join('LEFT JOIN', 'city', 'city.id = user.city_id')
             ->join('LEFT JOIN', 'user_skill', 'user.id = user_skill.user_id')
             ->join('LEFT JOIN', 'skill', 'user_skill.skill_id = skill.id')
-            ->groupBy('user.name')
+            ->groupBy('user.id')
             ->orderBy('user.id DESC')
             ->all();
     }

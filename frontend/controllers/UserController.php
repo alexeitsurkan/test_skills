@@ -1,20 +1,15 @@
 <?php namespace frontend\controllers;
 
-
-use frontend\helper\UserHelper;
 use frontend\models\Entity\City;
 use frontend\models\Entity\RussianName;
 use frontend\models\Entity\Skill;
 use frontend\models\Entity\User;
 use frontend\models\Entity\UserSkill;
-use frontend\models\UserControl;
+use frontend\models\UserForm;
 use frontend\models\UserModel;
 use Yii;
 use yii\web\Controller;
 
-/**
- * Site controller
- */
 class UserController extends Controller
 {
     /**
@@ -39,7 +34,7 @@ class UserController extends Controller
     public function actionForm($id = null)
     {
         $action = 'create';
-        $model = new UserControl();
+        $model = new UserForm();
         if (!empty($id)) {
             $action = 'update';
             $user = User::findOne($id);
@@ -63,7 +58,7 @@ class UserController extends Controller
     public function actionCreate()
     {
         $post = Yii::$app->request->post();
-        $model = new UserControl(['scenario' => UserControl::CREATE]);
+        $model = new UserForm(['scenario' => UserForm::CREATE]);
         $model->load($post);
         if($model->create()){
             return 'true';
@@ -73,7 +68,7 @@ class UserController extends Controller
     public function actionUpdate()
     {
         $post = Yii::$app->request->post();
-        $model = new UserControl(['scenario' => UserControl::UPDATE]);
+        $model = new UserForm(['scenario' => UserForm::UPDATE]);
         $model->load($post);
         if($model->update()){
             return 'true';
@@ -88,7 +83,7 @@ class UserController extends Controller
 
     public function actionCreateRandom()
     {
-        $model = new UserControl(['scenario' => UserControl::CREATE]);
+        $model = new UserForm(['scenario' => UserForm::CREATE]);
         $model->name = RussianName::randomName();
         $model->city = City::randomId();
         $model->skill = [Skill::randomId()];

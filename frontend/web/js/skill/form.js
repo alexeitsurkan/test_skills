@@ -5,13 +5,10 @@ $(document).ready( function () {
     fullPathArr.splice(-1, 1);
     var fullPathCropped = fullPathArr.join('/');
 
-    $('#skill').bootstrapDualListbox();
-
-    $('#sendForm').on('click',function () {
-        var el = $(this);
+    $('#sendSkill').on('click',function () {
         var fd = new FormData($(this).parents('form')[0]);
         $.ajax({
-            url: fullPathCropped + "/user/" + action,
+            url: fullPathCropped + "/skill/create",
             type: "POST",
             data: fd,
             cache: false,
@@ -21,8 +18,7 @@ $(document).ready( function () {
             if (data) {
                 $('.modal-backdrop:first').remove();
                 $('.bootbox:first').remove();
-                bootbox.alert('<p class="text-success">Пользователь Сохранен!</p>',function () {
-                    AddTable();
+                bootbox.alert('<p class="text-success">Навык Сохранен!</p>',function () {
                 });
             } else {
                 bootbox.alert('<p class="text-danger">Произошла ошибка!</p>');

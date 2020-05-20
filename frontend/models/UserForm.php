@@ -5,14 +5,14 @@ use frontend\models\Entity\UserSkill;
 use yii\base\Model;
 
 /**
- * Class UserControl
+ * Class UserForm
  * @package frontend\models
  * @property $id
  * @property $name
  * @property $city
  * @property $skill
  */
-class UserControl extends Model
+class UserForm extends Model
 {
     public $id;
     public $name;

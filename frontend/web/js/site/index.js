@@ -38,4 +38,22 @@ function AddTable() {
             }
         });
     })
+
+    $('#CreateCity').on('click', function () {
+        $.get(fullPathCropped + "/city/form").done(function (data) {
+            bootbox.dialog({
+                message: data,
+            });
+        });
+    })
+
+    $('#CreateSkill').on('click', function () {
+        $.get(fullPathCropped + "/skill/form").done(function (data) {
+            bootbox.dialog({
+                message: data,
+            });
+        });
+    })
+
+
 })(jQuery);
