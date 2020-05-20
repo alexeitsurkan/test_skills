@@ -1,25 +1,30 @@
 <p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
+    <a href="#">
+        <img src="https://i.ibb.co/y5SvtR6/2020-05-20-21-36-39.png">
     </a>
-    <h1 align="center">Yii 2 Advanced Project Template</h1>
+    <h1 align="center">Тестовое задание</h1>
     <br>
 </p>
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
+Задание
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
+    1. Создать MySQL базу данных с таблицами Users, Skills, City;
+    2. Поля таблицы Users:
+        1. id;
+        2. name;
+        3. city_id;
+    3. Поля таблиц Skills и City:
+        1. id;
+        2. name;
+    4. Можно создать другие вспомогательные таблицы, при необходимости;
+    5. Заполнить таблицы несколькими записями;
+    6. Один пользователь может не иметь навыков или иметь их несколько. Место жительства может быть только одно;
+    7. Используя Yii2, отобразить на странице список всех пользователей в таком виде или при желании оформить таблицей:
+        1. <имя>. Место жительства: <город>. [Навыки (<навык>[,<навык>])];
+	Для доступа к данным использовать ActiveRecord. Данные вывести в таблицу 	DataTables (https://datatables.net/). CRUD генератор не использовать. При добавлении 	нового пользователя, обновлять данные в таблице без перезагрузки страницы. На 	каждой строчке добавить кнопку для удаления записи с окном подтверждения 	(можно через обычный js confirm). После удаления данных, 	желательно обновить 	данные без перезагрузки страницы.
+    8. Сделать кнопку для добавления нового пользователя со случайным именем (именно именем а не набором символов), местожительством и набором навыков;
+    9. Весь код выложить на GitHub.
 
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
-
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
-
-[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Build Status](https://travis-ci.com/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.com/yiisoft/yii2-app-advanced)
 
 DIRECTORY STRUCTURE
 -------------------
@@ -36,15 +41,7 @@ console
     migrations/          contains database migrations
     models/              contains console-specific model classes
     runtime/             contains files generated during runtime
-backend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains backend configurations
-    controllers/         contains Web controller classes
-    models/              contains backend-specific model classes
-    runtime/             contains files generated during runtime
-    tests/               contains tests for backend application    
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
+
 frontend
     assets/              contains application assets such as JavaScript and CSS
     config/              contains frontend configurations

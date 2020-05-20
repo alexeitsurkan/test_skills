@@ -6,6 +6,9 @@ RUN sed -i -e 's|/app/web|/app/frontend/web|g' /etc/apache2/sites-available/000-
 RUN pecl install xdebug-2.7.1 \
         && docker-php-ext-enable xdebug
 
+RUN apt update \
+    && apt install nodejs -y \
+    npm  -y
 
 WORKDIR /app
 
